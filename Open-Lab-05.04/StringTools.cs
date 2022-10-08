@@ -6,7 +6,15 @@ namespace Open_Lab_05._04
     {
         public string RemoveSpecialCharacters(string original)
         {
-            throw new NotImplementedException();
+            string result = "";
+            for (int i = 0; i < original.Length; i++)
+            {
+                if (Char.IsLetter(original[i]) || Char.IsDigit(original[i]) || original[i] == '-' || original[i] == ' ' || original[i] == '_')
+                {
+                    result += original[i];
+                }
+            }
+            return result;
         }
     }
 }
